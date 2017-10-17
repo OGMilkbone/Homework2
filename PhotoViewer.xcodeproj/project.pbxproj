@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		1086E01E1F95756700B0D774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1086E01D1F95756700B0D774 /* AppDelegate.swift */; };
-		1086E0201F95756700B0D774 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1086E01F1F95756700B0D774 /* ViewController.swift */; };
+		1086E0201F95756700B0D774 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1086E01F1F95756700B0D774 /* CollectionViewController.swift */; };
 		1086E0231F95756700B0D774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1086E0211F95756700B0D774 /* Main.storyboard */; };
 		1086E0251F95756700B0D774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1086E0241F95756700B0D774 /* Assets.xcassets */; };
 		1086E0281F95756700B0D774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1086E0261F95756700B0D774 /* LaunchScreen.storyboard */; };
 		1086E0331F95756700B0D774 /* PhotoViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1086E0321F95756700B0D774 /* PhotoViewerTests.swift */; };
 		1086E03E1F95756700B0D774 /* PhotoViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1086E03D1F95756700B0D774 /* PhotoViewerUITests.swift */; };
+		1086E04C1F95767600B0D774 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1086E04B1F95767600B0D774 /* ImageCell.swift */; };
+		1086E04E1F95775400B0D774 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1086E04D1F95775400B0D774 /* Photo.swift */; };
+		1086E0501F95824E00B0D774 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1086E04F1F95824E00B0D774 /* DetailViewController.swift */; };
+		1086E0521F95837300B0D774 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1086E0511F95837300B0D774 /* ImageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +39,8 @@
 
 /* Begin PBXFileReference section */
 		1086E01A1F95756700B0D774 /* PhotoViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1086E01D1F95756700B0D774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1086E01F1F95756700B0D774 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1086E01D1F95756700B0D774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = /Users/jwilson/Desktop/Project2/PhotoViewer/PhotoViewer/AppDelegate.swift; sourceTree = "<absolute>"; };
+		1086E01F1F95756700B0D774 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		1086E0221F95756700B0D774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1086E0241F95756700B0D774 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1086E0271F95756700B0D774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,10 @@
 		1086E0391F95756700B0D774 /* PhotoViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1086E03D1F95756700B0D774 /* PhotoViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerUITests.swift; sourceTree = "<group>"; };
 		1086E03F1F95756700B0D774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1086E04B1F95767600B0D774 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		1086E04D1F95775400B0D774 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		1086E04F1F95824E00B0D774 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		1086E0511F95837300B0D774 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +106,15 @@
 			isa = PBXGroup;
 			children = (
 				1086E01D1F95756700B0D774 /* AppDelegate.swift */,
-				1086E01F1F95756700B0D774 /* ViewController.swift */,
+				1086E01F1F95756700B0D774 /* CollectionViewController.swift */,
+				1086E04F1F95824E00B0D774 /* DetailViewController.swift */,
+				1086E0511F95837300B0D774 /* ImageService.swift */,
 				1086E0211F95756700B0D774 /* Main.storyboard */,
 				1086E0241F95756700B0D774 /* Assets.xcassets */,
 				1086E0261F95756700B0D774 /* LaunchScreen.storyboard */,
 				1086E0291F95756700B0D774 /* Info.plist */,
+				1086E04B1F95767600B0D774 /* ImageCell.swift */,
+				1086E04D1F95775400B0D774 /* Photo.swift */,
 			);
 			path = PhotoViewer;
 			sourceTree = "<group>";
@@ -259,8 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1086E0201F95756700B0D774 /* ViewController.swift in Sources */,
+				1086E04E1F95775400B0D774 /* Photo.swift in Sources */,
+				1086E0201F95756700B0D774 /* CollectionViewController.swift in Sources */,
+				1086E0501F95824E00B0D774 /* DetailViewController.swift in Sources */,
 				1086E01E1F95756700B0D774 /* AppDelegate.swift in Sources */,
+				1086E04C1F95767600B0D774 /* ImageCell.swift in Sources */,
+				1086E0521F95837300B0D774 /* ImageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,4 +6,11 @@
 //  Copyright © 2017 jwilson. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ImageCell: UICollectionViewCell{
+    
+    @IBOutlet weak var imageView: UIImageView!
+    var photo: Photo?
+    
+}

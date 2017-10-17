@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CollectionViewController.swift
 //  PhotoViewer
 //
 //  Created by jwilson on 10/16/17.
@@ -12,12 +12,13 @@ class CollectionViewController: UIViewController {
     
     var photoArray: [Photo] = []
  
-    @IBOutlet var collectionView: UICollectionView!
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        //collectionView.dataSource = self
+        //collectionView.delegate = self
         fetchData()
     }
     
@@ -35,6 +36,9 @@ class CollectionViewController: UIViewController {
             }
                 
             self.photoArray = tempPhotos.map{ Photo(dictionary: $0)}
+            for photo in self.photoArray{
+                print("\(photo.imageURL)")
+            }
             
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
