@@ -17,8 +17,8 @@ class CollectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //collectionView.dataSource = self
-        //collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.delegate = self
         fetchData()
     }
     
